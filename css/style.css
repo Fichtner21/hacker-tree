@@ -27,7 +27,7 @@ body {
 }
 
 .bg-v2 {
-    background-image: url(/w2.png);
+    background-image: url('../w2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,6 +45,12 @@ code {
     /* padding:50px 0;  */
     line-height:50px;
     font-size: 18px;
+}
+
+@media screen and (max-width: 660px){
+    .init {
+        line-height: 30px;        
+    }
 }
 
 .float {
@@ -162,7 +168,7 @@ code {
         right: 0;
         padding: 15px;
         top: 15%;
-        width: auto;
+        max-width: 100%;
         border-radius:0;
     }
 }
@@ -185,7 +191,7 @@ code {
 
 #enter {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 18px;
     outline: none;
     border: none;
     /* background-color: #000; */
@@ -195,6 +201,7 @@ code {
     font-family: Monoid-Regular;
     /* animation: 2s shine2 1.2s infinite ease-out; */    
     width:100%;
+    margin-top: 5px;
 }
 
 #cursor {
