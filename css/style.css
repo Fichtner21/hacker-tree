@@ -18,12 +18,23 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background-image: url('../w1.png');
+    background-image: url('../w2.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+}
+
+.bg-v2 {
+    background-image: url(/w2.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 code {
@@ -39,11 +50,11 @@ code {
 .float {
 	position: fixed;
     /* top: 10%; left: 0; bottom: 0; right: 0; */
-    top: 20%; left: 0; right: 0;
+    top: 25%; left: 0; right: 0;
     margin: auto;
     width: 300px;
     height: 200px;
-    width: 20%;
+    /* width: 20%; */
     padding: 10px;
 	background-color: black;
     color: red;
@@ -57,10 +68,17 @@ code {
     border: 2px solid red !important;
     animation: pulsate 1s ease-out infinite;
 }
+
+@media screen and (max-width: 660px){
+    .float, .grant {
+        height: 150px;
+    }
+}
+
 .grant {
 	position: fixed;
     /* top: 0; left: 0; bottom: 0; right: 0; */
-    top: 15%; left: 0; right: 0;
+    top: 25%; left: 0; right: 0;
     margin: auto;
     width: 300px;
     height: 200px;
@@ -101,6 +119,23 @@ code {
     transition: all 1s;
 }
 
+/* #normal { */
+    /* max-width: 1280px; */
+    /* margin: 0 auto; */
+    /* background: linear-gradient(to bottom, #fff 40%, #dddddd 50%, #fff 60%);
+    background-size:200% 200%;
+    background-repeat: no-repeat;
+    animation:shine 2s infinite linear;
+    position: absolute;
+    top: 7%;
+    left: 33.5%;
+    right: 33.5%; */
+    /* min-width: 550px; */
+    /* max-width: 635px;
+    height: 45%;
+    overflow: scroll; */
+/* } */
+
 #normal {
     /* max-width: 1280px; */
     /* margin: 0 auto; */
@@ -110,13 +145,34 @@ code {
     background-repeat: no-repeat;
     animation:shine 2s infinite linear;
     position: absolute;
-    top: 7%;
-    left: 33.5%;
-    right: 33.5%;
+    top: 15%;
+    /* left: 33.5%; */
+    /* right: 33.5%; */
     /* min-width: 550px; */
-    max-width: 635px;
-    height: 45%;
-    overflow: scroll;
+    max-width: 625px;
+    height: 49%;
+    overflow: scroll;    
+    border-radius: 35px;
+    padding: 0 5px;
+}
+
+@media screen and (max-width: 660px){
+    #normal {
+        left:0;
+        right: 0;
+        padding: 15px;
+        top: 15%;
+        width: auto;
+        border-radius:0;
+    }
+}
+
+@media screen and (min-width: 1750px){
+    #normal {
+        max-width: 692px;
+        height: 53%;
+        top: 11%;
+    }
 }
 
 #normal::-webkit-scrollbar {
